@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoTable from './components/TodoTable';
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container min-h-screen px-4">
+      <h1 className="text-6xl text-center py-12 font-medium font-title">
+        Type Todoz
+      </h1>
+      <div className="flex justify-center items-center">
+        <div className="w-2/3">
+          <TodoTable />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
