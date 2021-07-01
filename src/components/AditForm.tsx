@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ITodo } from '../interfaces';
 
@@ -28,10 +27,6 @@ function AditForm({
       completed: !isAdd && selectedTodo ? selectedTodo.completed : false,
     },
   });
-
-  useEffect(() => {
-    console.log('SELECTED_TODO', selectedTodo);
-  }, []);
 
   const onSubmit: SubmitHandler<ITodo> = (data: ITodo) => {
     isAdd ? addTodo(data) : editTodo(data);
